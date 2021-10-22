@@ -41,31 +41,31 @@ double: 4
 char: 1
 bool: 1
 
-**Struct regular_array**
+**Struct RegularArray**
 
-int n - 4, отступ 0;
+size_t n - 4, отступ 0;
 
 double* array: n * n * sizeof(double*) = n * n * 4 в оперативной памяти, 8 на стеке, отступ 4;
 
 Всего: 4 + n * n * 4 в оперативной памяти, 12 на стеке.
 
-**Struct diagonal_matrix**
+**Struct DiagonalMatrix**
 
-int n - 4, отступ 0;
+size_t n - 4, отступ 0;
 
 double* array: n * sizeof(double) = n * 4 в оперативной памяти, 8 на стеке, отступ 4;
 
 Всего: 4 + 4 n в оперативной памяти, 8 на стеке.
 
-**Struct lower_triangular_matrix**
+**Struct LowerTriangularMatrix**
 
-int n - 4, отступ 0;
+size_t n - 4, отступ 0;
 
 double* array: n * (n + 1) / 2 * sizeof(double) = n * (n + 1) * 2 в оперативной памяти, 8 на стеке, отступ 4;
 
 Всего: 4 + n * (n + 1) * 2 в оперативной памяти, 12 на стеке.
 
-**Struct square_matrix**
+**Class SquareMatrix**
 
 enum key {REGULAR_ARRAY, DIAGONAL_MATRIX, LOWER_TRIANGULAR_MATRIX}: 4, отступ 0;
 
